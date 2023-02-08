@@ -1,0 +1,46 @@
+.navbar-brand {
+    font-family: 'Satisfy', cursive;
+    font-size: 25px;
+    margin-left: 24px;    
+}
+.main__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main__wrapper h3{
+    margin-top: 50px;
+}
+.main__wrapper .form__item{
+    width: 400px;
+}
+.main__wrapper .form__item .input{
+    width: 100%;
+    padding: 7px;
+    margin: 15px;
+    margin-left: 0;
+}
+.remember-me{
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+}
+.remember-me input{
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+.main__wrapper .form__item button{
+    width: 100%;
+    padding: 7px;
+    margin: 15px;
+    background-color: blue;
+    color: wheat;
+    border: none;
+}
+.form__btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

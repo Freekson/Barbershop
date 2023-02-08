@@ -1,0 +1,60 @@
+.html,body {
+    background-color: #f2f7f3;
+    box-sizing: border-box;
+}
+.hero {
+    padding-top: 6rem;
+
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2c2b2c;
+    box-shadow: 1px 1px 5px 5px rgb(230, 229, 229);
+    border-radius: 15px;
+    width: 50%;
+}
+.app_hero {
+    margin: 3rem auto;
+
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.pole_input {
+    border-radius:5px;
+    border: 1px solid rgb(204, 204, 204);
+    margin: 0.4rem auto;
+}
+.title_input {
+    font-weight: 600;
+}
+
+.btn {
+    width: 140%;
+    margin-top: 1rem;
+    background-color: #545454
+}
+@media screen  and  (max-width: 769px) {
+    .radio_type {
+        font-size: 0.8rem;
+    }
+    .container {
+        width: 60%;
+    }
+}
+@media screen  and  (max-width: 426px) {
+    .radio_type {
+        font-size: 1rem;
+    }
+    .container {
+        width: 80%;
+    }
+}
+.select{
+    width: 100%;
+}
