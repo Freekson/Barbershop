@@ -13,6 +13,11 @@
                 <div class="main__body">
                     <form name="ordering" id="ordering" method="post" action="{{url('store-form')}}">  
                         @csrf
+                        <div class="form__item" style="display:none">
+                            <div>
+                                <input id="user_id" type="text" class="input " name="user_id" value="{{  Auth::user()->id }}" required autocomplete="user_id" >
+                            </div>
+                        </div>
                         <div class="form__item">
                             <label for="name">{{ __('Name') }}</label>
                             <div>

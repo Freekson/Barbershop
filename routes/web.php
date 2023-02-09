@@ -37,3 +37,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('home', [OrderController::class, 'allData']);
 Route::get('ordering', [OrderController::class, 'index']);
 Route::post('store-form', [OrderController::class, 'store']);
+Route::get('/home', 'App\Http\Controllers\OrderController@allData')->name('home');
+Route::get('/user/order/{id}', 'App\Http\Controllers\OrderController@showOneOrder')->name('order-details');
+Route::get('/user/order/{id}/change', 'App\Http\Controllers\OrderController@changeOrder')->name('order-change');
+Route::post('/user/order/{id}/change', 'App\Http\Controllers\OrderController@changeOrderSubmit')->name('order-change-submit');
+Route::get('/user/order/{id}/delete', 'App\Http\Controllers\OrderController@deleteOrder')->name('order-delete');

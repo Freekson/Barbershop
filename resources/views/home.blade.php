@@ -17,27 +17,20 @@
         <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             {{ __('Logout') }}
         </a>
-
-
-        @if (!$data->isEmpty())
             <h3>Your orders:</h3>
-        @endif
         @foreach ($data as $el)
+            @if ($el->user_id == Auth::user()->id)
             <div class="allert allert-info" style="margin: 20px 0;">
                 <p>Сustomer name: {{$el->name }} {{$el->surname}} </p>
                 <p>Type of procedure: {{$el->procedure}} </p>
                 <p>Date and time: {{$el->date}}; {{$el->time}}</p>
                 <p>Order time: {{$el->created_at}}</p>
+                <a href="{{route('order-details', $el->id)}}"><button>Details</button></a> 
             </div>
+            @endif
+
         @endforeach
-        @if (!$data->isEmpty())
             <h3><a href="ordering">Order more</a></h3>
-        @endif
-
-
-        @if ($data->isEmpty())
-            <h3>Do not have orders yet? <a href="ordering">Order it now</a></h3>
-        @endif
         </div>
     </main>
     <footer>
